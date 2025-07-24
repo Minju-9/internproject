@@ -34,7 +34,7 @@ dependencies {
 	testImplementation 'org.springframework.security:spring-security-test'
 	testRuntimeOnly 'org.junit.platform:junit-platform-launcher'
 	implementation 'com.fasterxml.jackson.core:jackson-databind'
-
+	implementation 'org.postgresql:postgresql:42.7.3'
 
 	// 외부 API 호출 비동기로 처리
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
