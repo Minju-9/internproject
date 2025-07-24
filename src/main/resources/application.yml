@@ -1,11 +1,11 @@
 server:
-  ${PORT:8082}
+  port: ${PORT:8082}  # Render가 PORT 환경변수를 자동으로 세팅
 
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${DATABASE_URL}           # Render PostgreSQL 자동 환경변수
-    username: ${DATABASE_USER}
+    url: ${DATABASE_URL}           # Render에서 External URL 그대로 환경변수에 넣으면 됨
+    username: ${DATABASE_USER}     # URL에 따로 넣지 않는 경우 직접 환경변수 등록
     password: ${DATABASE_PASSWORD}
 
   jpa:
@@ -41,7 +41,7 @@ spring:
 
           kakao:
             client-id: ${KAKAO_CLIENT_ID}
-            client-secret: ${KAKAO_CLIENT_SECRET}  # 카카오는 secret 없어도 되지만, 환경변수로 유지
+            client-secret: ${KAKAO_CLIENT_SECRET}  # 카카오는 secret 없어도 되지만 유지
             redirect-uri: "{baseUrl}/login/oauth2/code/kakao"
             authorization-grant-type: authorization_code
             client-authentication-method: client_secret_post
