@@ -1,5 +1,5 @@
 server:
-  port: 8080  # Render 기본 포트 (8080 고정)
+  ${PORT:8080}
 
 spring:
   datasource:
