@@ -4,7 +4,7 @@ server:
 spring:
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: ${DATABASE_URL}           # Render PostgreSQL External URL 환경변수
+    url: jdbc:postgresql://${DATABASE_HOST}:${DATABASE_PORT}/${DATABASE_NAME}         
     username: ${DATABASE_USER}     # URL에 없으면 별도로 입력
     password: ${DATABASE_PASSWORD}
 
