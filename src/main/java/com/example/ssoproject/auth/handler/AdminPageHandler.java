@@ -15,6 +15,6 @@ public class AdminPageHandler implements AuthenticationSuccessHandler {
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, Authentication authentication) throws IOException, ServletException {
         // 로그인 후 이동할 페이지
-        response.sendRedirect("http://localhost:5173/dashboard");
+        response.sendRedirect("https://intern-proj-main.vercel.app/dashboard");
     }
 }
